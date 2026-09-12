@@ -1,0 +1,20 @@
+HISPANIC HERITAGE — GITHUB UPLOAD BUNDLE
+========================================
+
+Unzip this, then upload BOTH items below to the ROOT of radan55.github.io:
+
+  .nojekyll            <- empty file, must sit at the repo root
+  hispanic-heritage/   <- drag the FOLDER, not the files inside it
+
+In GitHub: Add file > Upload files, then drag both into the drop zone.
+Before you commit, check the file list shows paths with slashes, like
+hispanic-heritage/images/01-ellen-ochoa.jpg. If the names appear bare with no
+folders, the drag did not take — start over and drag the folder itself.
+
+Live address after the build finishes:
+  radan55.github.io/hispanic-heritage/
+
+If .nojekyll does not appear after unzipping, your computer is hiding files
+that start with a dot. On Windows: View > Show > Hidden items. On Mac:
+Cmd+Shift+period. You can also just create it in GitHub: Add file > Create new
+file, type  .nojekyll  as the name, leave it empty, and commit.

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hispanic Heritage · 30 People Who Made a Difference</title>
+<meta name="description" content="Thirty bilingual biography profiles for grades 9–12 English learners, with discussion questions, language supports and classroom projects.">
+<meta property="og:title" content="Hispanic Heritage · 30 People">
+<meta property="og:description" content="Bilingual biography profiles for grades 9–12 English learners.">
+<meta property="og:image" content="images/01-ellen-ochoa.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#771D36; --wine-dk:#5A1428; --gold:#E3A93C; --gold-dk:#B9832A;
+    --cream:#FBF6EC; --paper:#FFFFFF; --ink:#241A1D; --muted:#6E5F63; --rule:#E0D5C6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);
+    font-family:Inter,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.6;
+    -webkit-text-size-adjust:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  a{color:var(--wine)}
+
+  /* ---- header ---- */
+  header{background:var(--wine);color:#fff;position:relative;overflow:hidden}
+  header::before{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(112deg,rgba(227,169,60,.10) 0 2px,transparent 2px 24px)}
+  .head-in{position:relative;padding:44px 24px 34px;max-width:1140px;margin:0 auto}
+  .brand{font-size:12px;letter-spacing:.18em;color:var(--gold);font-weight:600;margin:0 0 16px}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:700;letter-spacing:-.03em;
+    font-size:clamp(40px,9vw,74px);line-height:.92;margin:0}
+  h1 em{display:block;font-style:italic;font-weight:600;color:var(--gold)}
+  .tag{margin:16px 0 0;font-size:17px;color:#F0DCD3;max-width:48ch}
+  .tag-es{font-family:Fraunces,Georgia,serif;font-style:italic;color:var(--gold);font-size:16px;
+    margin:6px 0 0}
+  .byline{margin:20px 0 0;font-size:13.5px;color:#DCC0C7}
+
+  /* ---- controls ---- */
+  .controls{position:sticky;top:0;z-index:20;background:var(--cream);
+    border-bottom:1px solid var(--rule);padding:14px 0}
+  .controls-in{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;
+    gap:10px;align-items:center}
+  .chip{font:inherit;font-size:13.5px;font-weight:500;cursor:pointer;background:transparent;
+    border:1.4px solid var(--wine);color:var(--wine);padding:6px 14px;border-radius:999px}
+  .chip:hover{background:#F2E6E9}
+  .chip.on{background:var(--wine);color:#fff}
+  .search{flex:1;min-width:180px;font:inherit;font-size:14px;padding:8px 14px;
+    border:1.4px solid var(--rule);border-radius:999px;background:#fff}
+  .langtog{display:flex;border:1.4px solid var(--wine);border-radius:999px;overflow:hidden}
+  .langtog button{font:inherit;font-size:13px;font-weight:600;cursor:pointer;border:0;
+    background:transparent;color:var(--wine);padding:6px 13px}
+  .langtog button.on{background:var(--wine);color:#fff}
+
+  /* ---- grid ---- */
+  main{padding:30px 0 10px}
+  .count{font-size:13.5px;color:var(--muted);margin:0 0 16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;
+    list-style:none;padding:0;margin:0}
+  .card{background:var(--paper);border:1px solid var(--rule);cursor:pointer;
+    display:flex;flex-direction:column;text-align:left;padding:0;font:inherit;color:inherit;
+    transition:transform .12s ease, box-shadow .12s ease}
+  .card:hover,.card:focus-visible{transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(119,29,54,.16);outline:none}
+  .card img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top center;display:block;
+    background:#EFE6DA}
+  .card-body{padding:14px 16px 18px}
+  .card .num{font-size:11.5px;letter-spacing:.14em;color:var(--gold-dk);font-weight:700}
+  .card h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px;line-height:1.15;
+    margin:5px 0 4px;color:var(--wine)}
+  .card .roles{font-size:13px;color:var(--muted);margin:0}
+
+  /* ---- detail dialog ---- */
+  dialog{border:0;padding:0;max-width:900px;width:calc(100% - 32px);background:var(--paper);
+    box-shadow:0 24px 70px rgba(36,26,29,.4)}
+  dialog::backdrop{background:rgba(36,26,29,.62)}
+  .d-top{display:grid;grid-template-columns:300px 1fr}
+  .d-img{background:var(--wine)}
+  .d-img img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .d-body{padding:26px 28px}
+  .d-meta{font-size:12px;letter-spacing:.14em;font-weight:700;color:var(--gold-dk)}
+  .d-body h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:34px;line-height:1.05;
+    letter-spacing:-.02em;margin:6px 0 14px;color:var(--wine)}
+  .lang-label{font-size:11.5px;letter-spacing:.14em;font-weight:700;color:var(--wine);
+    margin:16px 0 4px}
+  .d-body p.txt{margin:0;font-size:15.5px}
+  .talk{margin-top:20px;background:var(--wine);color:#fff;padding:16px 18px}
+  .talk .lang-label{color:var(--gold);margin-top:0}
+  .talk p{margin:0;font-family:Fraunces,Georgia,serif;font-size:19px;line-height:1.3}
+  .frame{margin-top:14px;background:var(--cream);border-left:3px solid var(--gold);
+    padding:12px 16px;font-size:14.5px}
+  .frame b{color:var(--wine)}
+  .d-foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+    border-top:1px solid var(--rule);padding:14px 28px;background:var(--cream)}
+  .d-foot a{font-size:13px}
+  .navbtns{display:flex;gap:8px}
+  .navbtns button,.closebtn{font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;
+    border:1.4px solid var(--wine);background:#fff;color:var(--wine);padding:7px 15px;
+    border-radius:999px}
+  .navbtns button:hover,.closebtn:hover{background:var(--wine);color:#fff}
+  .closebtn{position:absolute;top:14px;right:16px;z-index:3;border-color:#fff;color:#fff;
+    background:rgba(36,26,29,.45)}
+
+  /* ---- activities ---- */
+  .acts{background:var(--wine);color:#fff;margin-top:50px;padding:44px 0 50px;position:relative;
+    overflow:hidden}
+  .acts::before{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(112deg,rgba(227,169,60,.09) 0 2px,transparent 2px 24px)}
+  .acts .wrap{position:relative}
+  .acts h2{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:32px;margin:0 0 6px}
+  .acts .sub{color:#F0DCD3;margin:0 0 26px;max-width:60ch}
+  .actgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .act{background:rgba(255,255,255,.07);border:1px solid rgba(227,169,60,.35);padding:20px}
+  .act-es{font-size:11.5px;letter-spacing:.14em;font-weight:700;color:var(--gold);margin:0}
+  .act h3{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:21px;margin:6px 0 10px}
+  .act p{font-size:14.5px;color:#F4E7E3;margin:0 0 10px}
+  .act-frame{font-family:Fraunces,Georgia,serif;font-style:italic;color:var(--gold);font-size:14.5px}
+
+  /* ---- teacher note + footer ---- */
+  .note{padding:40px 0}
+  .note h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:26px;color:var(--wine);
+    margin:0 0 6px}
+  .note ul{margin:12px 0 0;padding-left:20px;max-width:70ch}
+  .note li{margin-bottom:8px}
+  footer{background:var(--wine-dk);color:#D9C3C9;padding:26px 0;font-size:14px}
+  footer b{display:block;color:#fff;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600}
+  footer a{color:var(--gold)}
+
+  @media (max-width:720px){
+    .d-top{grid-template-columns:1fr}
+    .d-img img{max-height:280px}
+  }
+  @media print{
+    .controls,.acts,dialog,.closebtn{display:none !important}
+    body{background:#fff}
+    .grid{grid-template-columns:repeat(3,1fr)}
+    .card{break-inside:avoid;box-shadow:none}
+    header{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-in">
+    <p class="brand">EL PUBLISHING · LAUREL HIGH SCHOOL</p>
+    <h1>Hispanic <em>Heritage</em></h1>
+    <p class="tag">Thirty people. Many ways to make a difference. Bilingual biography profiles
+      for grades 9&ndash;12, with a discussion question and a language support for every person.</p>
+    <p class="tag-es">Personas que dejan huella &middot; Biograf&iacute;as, conversaciones y
+      proyectos de investigaci&oacute;n</p>
+    <p class="byline">Richard A. Daniel, M.Ed. &middot; ENL/EL Specialist</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-in">
+    <button class="chip on" data-cat="all">All 30</button>
+        <button class="chip" data-cat="Science, Space &amp; Health">Science, Space &amp; Health</button>
+        <button class="chip" data-cat="Justice &amp; Community">Justice &amp; Community</button>
+        <button class="chip" data-cat="Arts &amp; Music">Arts &amp; Music</button>
+        <button class="chip" data-cat="Words &amp; Learning">Words &amp; Learning</button>
+        <button class="chip" data-cat="Sports">Sports</button>
+    <input class="search" type="search" placeholder="Search a name or a field…" id="q">
+    <div class="langtog" role="group" aria-label="Language">
+      <button data-lang="both" class="on">Both</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="es">ES</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <p class="count" id="count"></p>
+  <ul class="grid" id="grid"></ul>
+</main>
+
+<section class="acts">
+  <div class="wrap">
+    <h2>After the profiles</h2>
+    <p class="sub">Four projects that turn thirty biographies into student work. Run them in
+      order or pick one.</p>
+    <div class="actgrid">
+      <article class="act">
+        <p class="act-es">DOS VIDAS, UNA CONEXIÓN</p>
+        <h3>Two lives, one connection</h3>
+        <p>Choose two people who worked in different fields. Find one shared idea, such as access, identity or service. Use one fact about each person to explain the connection.</p>
+        <p class="act-frame">Both ___ and ___ contributed by ___. Their work differs because ___.</p>
+      </article>
+      <article class="act">
+        <p class="act-es">TU REPORTAJE</p>
+        <h3>Your research feature</h3>
+        <p>Choose one person and investigate one question. Use two sources. Record the author or organization, page title and link. Write a 100-word profile with a verified contribution and an explanation of its impact.</p>
+        <p class="act-frame">Add a captioned illustration, a short Spanish summary and one question for readers.</p>
+      </article>
+      <article class="act">
+        <p class="act-es">GALERÍA DEL AULA</p>
+        <h3>Classroom gallery</h3>
+        <p>Publish your profile as a magazine page. Display the pages. Read three classmates&#x27; profiles and leave a specific question or comment supported by what you read.</p>
+        <p class="act-frame">Explain one connection between a featured person and an issue in your community.</p>
+      </article>
+      <article class="act">
+        <p class="act-es">LO QUE APRENDIMOS</p>
+        <h3>Evidence of learning</h3>
+        <p>Which contribution changed your thinking? Name the person. Explain the contribution using two accurate details. Describe why it matters and identify a question you still want to investigate.</p>
+        <p class="act-frame">Success criteria: accurate facts, clear explanation, source credits and readable presentation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="note wrap">
+  <h2>Notes for teachers</h2>
+  <ul>
+    <li>Read one English biography, use the Spanish for comprehension support, and discuss the
+      profile question. Spread the profiles across several lessons rather than one sitting.</li>
+    <li>Allow about five minutes for a comparison, a separate class period for research, and ten
+      minutes for gallery discussion.</li>
+    <li>Offer bilingual notes and partner rehearsal before any student presents.</li>
+    <li>Assess content evidence separately from English grammar.</li>
+    <li>Every discussion question is an open inference, not a fact check. Ask students to point to
+      the sentence in the biography that supports their answer.</li>
+    <li>The illustrations are AI-generated interpretations, not photographs. Say so when you
+      display them, and use the linked source for verified facts.</li>
+  </ul>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Richard A. Daniel, M.Ed.</b>
+    ENL/EL Specialist &middot; Laurel High School &middot;
+    <a href="mailto:rdaniel@laurelschools.org">rdaniel@laurelschools.org</a>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-label="Profile">
+  <button class="closebtn" id="close">Close</button>
+  <div class="d-top">
+    <div class="d-img"><img id="d-img" alt=""></div>
+    <div class="d-body">
+      <p class="d-meta" id="d-meta"></p>
+      <h2 id="d-name"></h2>
+      <div id="d-en"><p class="lang-label">ENGLISH</p><p class="txt" id="d-entxt"></p></div>
+      <div id="d-es"><p class="lang-label">ESPA&Ntilde;OL</p><p class="txt" id="d-estxt"></p></div>
+      <div class="talk">
+        <p class="lang-label">LET&rsquo;S TALK / CONVERSEMOS</p>
+        <p id="d-q"></p>
+      </div>
+      <div class="frame"><b>Language support:</b> <span id="d-sup"></span></div>
+    </div>
+  </div>
+  <div class="d-foot">
+    <a id="d-src" href="#" target="_blank" rel="noopener">Source used for this biography</a>
+    <div class="navbtns">
+      <button id="prev">&larr; Previous</button>
+      <button id="next">Next &rarr;</button>
+    </div>
+  </div>
+</dialog>
+
+<script id="data" type="application/json">[{"n": 1, "name": "Ellen Ochoa", "roles": "Engineer, Astronaut, Leader", "en": "Ellen Ochoa is an American engineer of Mexican heritage. In 1993, she became the first Hispanic woman to travel to space. She flew on four space missions and later led NASA’s Johnson Space Center.", "es": "Ellen Ochoa es una ingeniera estadounidense de ascendencia mexicana. En 1993, se convirtió en la primera mujer hispana en viajar al espacio. Participó en cuatro misiones espaciales y después dirigió el Centro Espacial Johnson de la NASA.", "q": "What preparation might a space mission require?", "source": "https://www.nasa.gov/people/ellen-ochoa/", "support": "Ellen Ochoa contributed by ___. This matters because ___.", "image": "images/01-ellen-ochoa.jpg", "thumb": "thumbs/01-ellen-ochoa.jpg", "slug": "ellen-ochoa", "cat": "Science, Space & Health"}, {"n": 2, "name": "José Hernández", "roles": "Engineer, Astronaut", "en": "José Hernández grew up in a Mexican American farmworker family. He studied engineering and became a NASA astronaut. In 2009, he traveled aboard the space shuttle Discovery on a mission to the International Space Station.", "es": "José Hernández creció en una familia de trabajadores agrícolas mexicoamericanos. Estudió ingeniería y se convirtió en astronauta de la NASA. En 2009, viajó a bordo del transbordador Discovery en una misión a la Estación Espacial Internacional.", "q": "How can education expand a person’s opportunities?", "source": "https://en.wikipedia.org/wiki/José_M._Hernández", "support": "José Hernández contributed by ___. This matters because ___.", "image": "images/02-jose-hernandez.jpg", "thumb": "thumbs/02-jose-hernandez.jpg", "slug": "jose-hernandez", "cat": "Science, Space & Health"}, {"n": 3, "name": "Franklin Chang-Díaz", "roles": "Physicist, Astronaut", "en": "Franklin Chang-Díaz was born in Costa Rica and became an American astronaut. He flew on seven space shuttle missions. His work also includes research on advanced rocket propulsion, the technology that moves rockets through space.", "es": "Franklin Chang-Díaz nació en Costa Rica y se convirtió en astronauta estadounidense. Participó en siete misiones de transbordadores espaciales. También ha investigado la propulsión avanzada de cohetes, la tecnología que permite que los cohetes se desplacen por el espacio.", "q": "Why would engineers study better ways to move rockets?", "source": "https://en.wikipedia.org/wiki/Franklin_Chang-Díaz", "support": "Franklin Chang-Díaz contributed by ___. This matters because ___.", "image": "images/03-franklin-chang-diaz.jpg", "thumb": "thumbs/03-franklin-chang-diaz.jpg", "slug": "franklin-chang-diaz", "cat": "Science, Space & Health"}, {"n": 4, "name": "Mario Molina", "roles": "Chemist, Environmental Scientist", "en": "Mario Molina was a Mexican chemist who studied Earth’s atmosphere. He helped explain how certain chemicals damage the ozone layer, which protects life from harmful sunlight. He shared the 1995 Nobel Prize in Chemistry.", "es": "Mario Molina fue un químico mexicano que estudió la atmósfera terrestre. Ayudó a explicar cómo ciertas sustancias químicas dañan la capa de ozono, que protege la vida de la radiación solar dañina. Compartió el Premio Nobel de Química de 1995.", "q": "How can a discovery help protect a community?", "source": "https://en.wikipedia.org/wiki/Mario_Molina", "support": "Mario Molina contributed by ___. This matters because ___.", "image": "images/04-mario-molina.jpg", "thumb": "thumbs/04-mario-molina.jpg", "slug": "mario-molina", "cat": "Science, Space & Health"}, {"n": 5, "name": "Luis Walter Alvarez", "roles": "Physicist, Inventor", "en": "Luis Walter Alvarez was an American physicist of Spanish heritage. He developed tools that helped scientists study tiny particles of matter. His discoveries in particle physics earned him the 1968 Nobel Prize in Physics.", "es": "Luis Walter Alvarez fue un físico estadounidense de ascendencia española. Desarrolló instrumentos que ayudaron a los científicos a estudiar partículas diminutas de la materia. Sus descubrimientos en física de partículas le valieron el Premio Nobel de Física de 1968.", "q": "Why do scientists need new tools?", "source": "https://en.wikipedia.org/wiki/Luis_Walter_Alvarez", "support": "Luis Walter Alvarez contributed by ___. This matters because ___.", "image": "images/05-luis-walter-alvarez.jpg", "thumb": "thumbs/05-luis-walter-alvarez.jpg", "slug": "luis-walter-alvarez", "cat": "Science, Space & Health"}, {"n": 6, "name": "César Chávez", "roles": "Labor Leader, Civil Rights Advocate", "en": "César Chávez was a Mexican American labor leader. He worked with farmworkers to seek better pay and safer working conditions. He helped build the United Farm Workers and used nonviolent organizing, marches, and boycotts to call for change.", "es": "César Chávez fue un líder sindical mexicoamericano. Trabajó con los trabajadores agrícolas para conseguir mejores salarios y condiciones laborales más seguras. Ayudó a formar el sindicato United Farm Workers y promovió cambios mediante la organización no violenta, las marchas y los boicots.", "q": "How can a boycott support a demand for change?", "source": "https://en.wikipedia.org/wiki/Cesar_Chavez", "support": "César Chávez contributed by ___. This matters because ___.", "image": "images/06-cesar-chavez.jpg", "thumb": "thumbs/06-cesar-chavez.jpg", "slug": "cesar-chavez", "cat": "Justice & Community"}, {"n": 7, "name": "Dolores Huerta", "roles": "Labor Leader, Community Organizer", "en": "Dolores Huerta is a Mexican American labor leader. She helped organize the union that became the United Farm Workers. Through negotiations and community action, she worked to improve farmworkers’ wages, working conditions, and rights.", "es": "Dolores Huerta es una líder sindical mexicoamericana. Ayudó a organizar el sindicato que llegó a ser United Farm Workers. Mediante negociaciones y acciones comunitarias, trabajó para mejorar los salarios, las condiciones laborales y los derechos de los trabajadores agrícolas.", "q": "How does organizing help workers speak together?", "source": "https://en.wikipedia.org/wiki/Dolores_Huerta", "support": "Dolores Huerta contributed by ___. This matters because ___.", "image": "images/07-dolores-huerta.jpg", "thumb": "thumbs/07-dolores-huerta.jpg", "slug": "dolores-huerta", "cat": "Justice & Community"}, {"n": 8, "name": "Sonia Sotomayor", "roles": "Judge, Author", "en": "Sonia Sotomayor grew up in New York City in a Puerto Rican family. She studied law and became a judge. In 2009, she became the first Hispanic justice on the United States Supreme Court.", "es": "Sonia Sotomayor creció en la ciudad de Nueva York en una familia puertorriqueña. Estudió derecho y se convirtió en jueza. En 2009, se convirtió en la primera jueza hispana de la Corte Suprema de los Estados Unidos.", "q": "Why does representation in public service matter?", "source": "https://en.wikipedia.org/wiki/Sonia_Sotomayor", "support": "Sonia Sotomayor contributed by ___. This matters because ___.", "image": "images/08-sonia-sotomayor.jpg", "thumb": "thumbs/08-sonia-sotomayor.jpg", "slug": "sonia-sotomayor", "cat": "Justice & Community"}, {"n": 9, "name": "Sylvia Mendez", "roles": "Civil Rights Advocate", "en": "Sylvia Mendez is an American civil rights advocate of Mexican and Puerto Rican heritage. As a child, she was part of the struggle behind Mendez v. Westminster, a case challenging school segregation in California. She later shared that history with students.", "es": "Sylvia Mendez es una defensora estadounidense de los derechos civiles de ascendencia mexicana y puertorriqueña. De niña, fue parte de la lucha que dio origen a Mendez contra Westminster, un caso que cuestionó la segregación escolar en California. Más tarde compartió esa historia con estudiantes.", "q": "How can one family help change access to education?", "source": "https://en.wikipedia.org/wiki/Sylvia_Mendez", "support": "Sylvia Mendez contributed by ___. This matters because ___.", "image": "images/09-sylvia-mendez.jpg", "thumb": "thumbs/09-sylvia-mendez.jpg", "slug": "sylvia-mendez", "cat": "Justice & Community"}, {"n": 10, "name": "Roberto Clemente", "roles": "Baseball Player, Humanitarian", "en": "Roberto Clemente was a Puerto Rican baseball star who played for the Pittsburgh Pirates. He reached 3,000 major-league hits and was known for his strong throwing arm. He also helped people in need through humanitarian work.", "es": "Roberto Clemente fue una estrella puertorriqueña del béisbol que jugó para los Piratas de Pittsburgh. Alcanzó los 3.000 hits en las Grandes Ligas y fue conocido por la potencia de su brazo al lanzar. También ayudó a personas necesitadas mediante su labor humanitaria.", "q": "What makes an athlete a community leader?", "source": "https://en.wikipedia.org/wiki/Roberto_Clemente", "support": "Roberto Clemente contributed by ___. This matters because ___.", "image": "images/10-roberto-clemente.jpg", "thumb": "thumbs/10-roberto-clemente.jpg", "slug": "roberto-clemente", "cat": "Sports"}, {"n": 11, "name": "Frida Kahlo", "roles": "Painter, Artist", "en": "Frida Kahlo was a Mexican painter known for her self-portraits. Her art explored identity, physical pain, and personal experience. She used vivid colors and images connected to Mexican culture to tell stories about her life.", "es": "Frida Kahlo fue una pintora mexicana conocida por sus autorretratos. Su arte exploró la identidad, el dolor físico y las experiencias personales. Usó colores vivos e imágenes relacionadas con la cultura mexicana para contar historias de su vida.", "q": "What symbols would tell a story about your identity?", "source": "https://en.wikipedia.org/wiki/Frida_Kahlo", "support": "Frida Kahlo contributed by ___. This matters because ___.", "image": "images/11-frida-kahlo.jpg", "thumb": "thumbs/11-frida-kahlo.jpg", "slug": "frida-kahlo", "cat": "Arts & Music"}, {"n": 12, "name": "Diego Rivera", "roles": "Painter, Mural Artist", "en": "Diego Rivera was a Mexican artist famous for large murals. His paintings showed workers, communities, and events from history. By painting on public walls, he helped bring art and stories to people beyond museums.", "es": "Diego Rivera fue un artista mexicano famoso por sus grandes murales. Sus pinturas mostraban trabajadores, comunidades y acontecimientos históricos. Al pintar en paredes de espacios públicos, ayudó a acercar el arte y las historias a personas fuera de los museos.", "q": "Where could public art tell your community’s story?", "source": "https://en.wikipedia.org/wiki/Diego_Rivera", "support": "Diego Rivera contributed by ___. This matters because ___.", "image": "images/12-diego-rivera.jpg", "thumb": "thumbs/12-diego-rivera.jpg", "slug": "diego-rivera", "cat": "Arts & Music"}, {"n": 13, "name": "Celia Cruz", "roles": "Singer, Performer", "en": "Celia Cruz was a Cuban singer celebrated for her powerful voice and energetic performances. Known as the Queen of Salsa, she helped bring Afro-Cuban music to audiences around the world. Her career spanned many decades.", "es": "Celia Cruz fue una cantante cubana reconocida por su potente voz y sus presentaciones llenas de energía. Conocida como la Reina de la Salsa, ayudó a llevar la música afrocubana a públicos de todo el mundo. Su carrera abarcó muchas décadas.", "q": "How can music carry culture across borders?", "source": "https://en.wikipedia.org/wiki/Celia_Cruz", "support": "Celia Cruz contributed by ___. This matters because ___.", "image": "images/13-celia-cruz.jpg", "thumb": "thumbs/13-celia-cruz.jpg", "slug": "celia-cruz", "cat": "Arts & Music"}, {"n": 14, "name": "Selena Quintanilla", "roles": "Singer, Performer", "en": "Selena Quintanilla was a Mexican American singer from Texas. She helped Tejano music reach a wider audience with her voice and stage presence. Her 1994 Grammy Award recognized her album Live! and an important achievement in her career.", "es": "Selena Quintanilla fue una cantante mexicoamericana de Texas. Con su voz y su presencia en el escenario, ayudó a que la música tejana llegara a un público más amplio. Su premio Grammy de 1994 reconoció su álbum Live! y un importante logro en su carrera.", "q": "What helps a musical tradition reach new listeners?", "source": "https://en.wikipedia.org/wiki/Selena", "support": "Selena Quintanilla contributed by ___. This matters because ___.", "image": "images/14-selena-quintanilla.jpg", "thumb": "thumbs/14-selena-quintanilla.jpg", "slug": "selena-quintanilla", "cat": "Arts & Music"}, {"n": 15, "name": "Gloria Estefan", "roles": "Singer, Songwriter", "en": "Gloria Estefan was born in Cuba and grew up in Miami. She became known as the lead singer of Miami Sound Machine. Her music blended Latin rhythms with pop and reached audiences in English and Spanish.", "es": "Gloria Estefan nació en Cuba y creció en Miami. Se dio a conocer como la cantante principal de Miami Sound Machine. Su música combinó ritmos latinos con el pop y llegó a públicos de habla inglesa y española.", "q": "How can a song connect people who speak different languages?", "source": "https://en.wikipedia.org/wiki/Gloria_Estefan", "support": "Gloria Estefan contributed by ___. This matters because ___.", "image": "images/15-gloria-estefan.jpg", "thumb": "thumbs/15-gloria-estefan.jpg", "slug": "gloria-estefan", "cat": "Arts & Music"}, {"n": 16, "name": "Rita Moreno", "roles": "Actor, Singer, Dancer", "en": "Rita Moreno was born in Puerto Rico and built a career in theater, film, and television. She won an Academy Award for West Side Story. She is also an Emmy, Grammy, and Tony Award winner.", "es": "Rita Moreno nació en Puerto Rico y desarrolló una carrera en el teatro, el cine y la televisión. Ganó un premio Óscar por West Side Story. También ha ganado premios Emmy, Grammy y Tony.", "q": "What skills might transfer between theater and film?", "source": "https://en.wikipedia.org/wiki/Rita_Moreno", "support": "Rita Moreno contributed by ___. This matters because ___.", "image": "images/16-rita-moreno.jpg", "thumb": "thumbs/16-rita-moreno.jpg", "slug": "rita-moreno", "cat": "Arts & Music"}, {"n": 17, "name": "Lin-Manuel Miranda", "roles": "Composer, Writer, Performer", "en": "Lin-Manuel Miranda is an American composer and performer of Puerto Rican heritage. He created the musicals In the Heights and Hamilton. His work combines storytelling with musical styles such as hip-hop and Latin music.", "es": "Lin-Manuel Miranda es un compositor y artista estadounidense de ascendencia puertorriqueña. Creó los musicales In the Heights y Hamilton. Su obra combina la narración de historias con estilos musicales como el hip-hop y la música latina.", "q": "How could music make a historical story memorable?", "source": "https://en.wikipedia.org/wiki/Lin-Manuel_Miranda", "support": "Lin-Manuel Miranda contributed by ___. This matters because ___.", "image": "images/17-lin-manuel-miranda.jpg", "thumb": "thumbs/17-lin-manuel-miranda.jpg", "slug": "lin-manuel-miranda", "cat": "Arts & Music"}, {"n": 18, "name": "Gabriela Mistral", "roles": "Poet, Educator", "en": "Gabriela Mistral was a Chilean poet and teacher. Her writing explored love, childhood, nature, and loss. In 1945, she became the first Latin American writer to receive the Nobel Prize in Literature.", "es": "Gabriela Mistral fue una poeta y maestra chilena. Sus escritos exploraron el amor, la infancia, la naturaleza y la pérdida. En 1945, se convirtió en la primera escritora latinoamericana en recibir el Premio Nobel de Literatura.", "q": "How can poetry help people describe difficult feelings?", "source": "https://en.wikipedia.org/wiki/Gabriela_Mistral", "support": "Gabriela Mistral contributed by ___. This matters because ___.", "image": "images/18-gabriela-mistral.jpg", "thumb": "thumbs/18-gabriela-mistral.jpg", "slug": "gabriela-mistral", "cat": "Words & Learning"}, {"n": 19, "name": "Isabel Allende", "roles": "Novelist, Storyteller", "en": "Isabel Allende is a Chilean author whose novels explore family, history, and identity. Her book The House of the Spirits brought her international attention. Her stories have been translated into many languages.", "es": "Isabel Allende es una autora chilena cuyas novelas exploran la familia, la historia y la identidad. Su libro La casa de los espíritus le dio reconocimiento internacional. Sus historias se han traducido a muchos idiomas.", "q": "How can a family story help explain history?", "source": "https://en.wikipedia.org/wiki/Isabel_Allende", "support": "Isabel Allende contributed by ___. This matters because ___.", "image": "images/19-isabel-allende.jpg", "thumb": "thumbs/19-isabel-allende.jpg", "slug": "isabel-allende", "cat": "Words & Learning"}, {"n": 20, "name": "Julia Alvarez", "roles": "Author, Poet, Educator", "en": "Julia Alvarez is a Dominican American writer. Her books explore family, language, migration, and identity. Through novels such as In the Time of the Butterflies, she has helped readers learn about Dominican history and experiences.", "es": "Julia Alvarez es una escritora dominicoamericana. Sus libros exploran la familia, el idioma, la migración y la identidad. Con novelas como En el tiempo de las mariposas, ha ayudado a los lectores a conocer la historia y las experiencias dominicanas.", "q": "How can a novel introduce readers to another community?", "source": "https://en.wikipedia.org/wiki/Julia_Alvarez", "support": "Julia Alvarez contributed by ___. This matters because ___.", "image": "images/20-julia-alvarez.jpg", "thumb": "thumbs/20-julia-alvarez.jpg", "slug": "julia-alvarez", "cat": "Words & Learning"}, {"n": 21, "name": "Antonia Novello", "roles": "Physician, Public Health Leader", "en": "Antonia Novello was born in Puerto Rico and became a physician. In 1990, she became the first woman and the first Hispanic person to serve as United States Surgeon General. Her work focused on improving public health, especially for children and families.", "es": "Antonia Novello nació en Puerto Rico y se convirtió en médica. En 1990, fue la primera mujer y la primera persona hispana en ocupar el cargo de directora general de Sanidad de los Estados Unidos. Su trabajo se centró en mejorar la salud pública, especialmente la de los niños y las familias.", "q": "Why might public health work focus on children?", "source": "https://www.nlm.nih.gov/exhibition/changing-the-face-of-medicine/physicians/biography_antonia_novello.html", "support": "Antonia Novello contributed by ___. This matters because ___.", "image": "images/21-antonia-novello.jpg", "thumb": "thumbs/21-antonia-novello.jpg", "slug": "antonia-novello", "cat": "Science, Space & Health"}, {"n": 22, "name": "Jaime Escalante", "roles": "Mathematics Teacher, Educator", "en": "Jaime Escalante was a Bolivian American mathematics teacher. At Garfield High School in East Los Angeles, he helped students succeed in advanced calculus. His teaching emphasized hard work, high expectations, and preparation. His story inspired the film Stand and Deliver.", "es": "Jaime Escalante fue un profesor de matemáticas bolivianoestadounidense. En la escuela secundaria Garfield de East Los Angeles, ayudó a sus estudiantes a tener éxito en cálculo avanzado. Su enseñanza destacó el esfuerzo, las altas expectativas y la preparación. Su historia inspiró la película Stand and Deliver.", "q": "What classroom conditions help students tackle difficult work?", "source": "https://en.wikipedia.org/wiki/Jaime_Escalante", "support": "Jaime Escalante contributed by ___. This matters because ___.", "image": "images/22-jaime-escalante.jpg", "thumb": "thumbs/22-jaime-escalante.jpg", "slug": "jaime-escalante", "cat": "Words & Learning"}, {"n": 23, "name": "Sandra Cisneros", "roles": "Author, Poet", "en": "Sandra Cisneros is a Mexican American author who grew up in Chicago. Her book The House on Mango Street explores a young girl’s life and community. Through fiction and poetry, Cisneros writes about home, identity, family, and belonging.", "es": "Sandra Cisneros es una autora mexicoamericana que creció en Chicago. Su libro La casa en Mango Street explora la vida de una niña y su comunidad. A través de la narrativa y la poesía, Cisneros escribe sobre el hogar, la identidad, la familia y el sentido de pertenencia.", "q": "How can a neighborhood become the setting for a story?", "source": "https://www.chipublib.org/sandra-cisneros-biography/", "support": "Sandra Cisneros contributed by ___. This matters because ___.", "image": "images/23-sandra-cisneros.jpg", "thumb": "thumbs/23-sandra-cisneros.jpg", "slug": "sandra-cisneros", "cat": "Words & Learning"}, {"n": 24, "name": "Carlos Santana", "roles": "Guitarist, Songwriter", "en": "Carlos Santana was born in Mexico and became an influential guitarist. His band blended rock with Latin rhythms and other musical traditions. His expressive guitar playing helped bring this mix of sounds to audiences around the world.", "es": "Carlos Santana nació en México y se convirtió en un guitarrista influyente. Su banda combinó el rock con ritmos latinos y otras tradiciones musicales. Su manera expresiva de tocar la guitarra ayudó a llevar esta mezcla de sonidos a públicos de todo el mundo.", "q": "What can musicians create by combining traditions?", "source": "https://en.wikipedia.org/wiki/Carlos_Santana", "support": "Carlos Santana contributed by ___. This matters because ___.", "image": "images/24-carlos-santana.jpg", "thumb": "thumbs/24-carlos-santana.jpg", "slug": "carlos-santana", "cat": "Arts & Music"}, {"n": 25, "name": "Oscar De La Hoya", "roles": "Boxer, Olympic Champion", "en": "Oscar De La Hoya is a Mexican American boxer from East Los Angeles. He won a gold medal for the United States at the 1992 Olympic Games. As a professional boxer, he won world championships in six weight divisions.", "es": "Oscar De La Hoya es un boxeador mexicoamericano de East Los Angeles. Ganó una medalla de oro para los Estados Unidos en los Juegos Olímpicos de 1992. Como boxeador profesional, ganó campeonatos mundiales en seis categorías de peso.", "q": "What preparation might an Olympic athlete need?", "source": "https://en.wikipedia.org/wiki/Oscar_De_La_Hoya", "support": "Oscar De La Hoya contributed by ___. This matters because ___.", "image": "images/25-oscar-de-la-hoya.jpg", "thumb": "thumbs/25-oscar-de-la-hoya.jpg", "slug": "oscar-de-la-hoya", "cat": "Sports"}, {"n": 26, "name": "Pura Belpré", "roles": "Librarian, Author, Storyteller", "en": "Pura Belpré was a Puerto Rican librarian, author, and storyteller. She became the first Puerto Rican librarian at the New York Public Library. Through bilingual story hours, books, and puppets, she helped Spanish-speaking families feel welcome in the library.", "es": "Pura Belpré fue una bibliotecaria, autora y narradora puertorriqueña. Fue la primera bibliotecaria puertorriqueña de la Biblioteca Pública de Nueva York. Mediante sesiones bilingües de cuentos, libros y títeres, ayudó a que las familias hispanohablantes se sintieran bienvenidas en la biblioteca.", "q": "How can a library welcome families who speak different languages?", "source": "https://en.wikipedia.org/wiki/Pura_Belpr%C3%A9", "support": "Pura Belpré contributed by ___. This matters because ___.", "image": "images/26-pura-belpre.jpg", "thumb": "thumbs/26-pura-belpre.jpg", "slug": "pura-belpre", "cat": "Words & Learning"}, {"n": 27, "name": "Tito Puente", "roles": "Musician, Composer, Bandleader", "en": "Tito Puente was a musician born in New York City to Puerto Rican parents. He became famous for playing timbales and leading energetic bands. His music helped bring mambo, Latin jazz, and Afro-Cuban rhythms to audiences around the world.", "es": "Tito Puente fue un músico nacido en la ciudad de Nueva York de padres puertorriqueños. Se hizo famoso por tocar los timbales y dirigir orquestas llenas de energía. Su música ayudó a llevar el mambo, el jazz latino y los ritmos afrocubanos a públicos de todo el mundo.", "q": "How can rhythm help people connect with a culture?", "source": "https://en.wikipedia.org/wiki/Tito_Puente", "support": "Tito Puente contributed by ___. This matters because ___.", "image": "images/27-tito-puente.jpg", "thumb": "thumbs/27-tito-puente.jpg", "slug": "tito-puente", "cat": "Arts & Music"}, {"n": 28, "name": "Laurie Hernandez", "roles": "Gymnast, Olympic Champion", "en": "Laurie Hernandez is an American gymnast of Puerto Rican heritage. At the 2016 Olympic Games, she helped the United States win team gold and earned an individual silver medal on the balance beam. Her performances combined strength, balance, and expressive movement.", "es": "Laurie Hernandez es una gimnasta estadounidense de ascendencia puertorriqueña. En los Juegos Olímpicos de 2016, ayudó a los Estados Unidos a ganar el oro por equipos y obtuvo una medalla de plata individual en la barra de equilibrio. Sus actuaciones combinaron fuerza, equilibrio y movimientos expresivos.", "q": "What does a team need from each athlete?", "source": "https://en.wikipedia.org/wiki/Laurie_Hernandez", "support": "Laurie Hernandez contributed by ___. This matters because ___.", "image": "images/28-laurie-hernandez.jpg", "thumb": "thumbs/28-laurie-hernandez.jpg", "slug": "laurie-hernandez", "cat": "Sports"}, {"n": 29, "name": "Severo Ochoa", "roles": "Biochemist, Researcher", "en": "Severo Ochoa was a Spanish American biochemist. He studied the chemical processes of living things, including how cells make RNA. He shared the 1959 Nobel Prize in Physiology or Medicine for discoveries about the biological synthesis of RNA and DNA.", "es": "Severo Ochoa fue un bioquímico hispanoestadounidense. Estudió los procesos químicos de los seres vivos, entre ellos cómo las células producen ARN. Compartió el Premio Nobel de Fisiología o Medicina de 1959 por descubrimientos sobre la síntesis biológica del ARN y del ADN.", "q": "How can research on cells help us understand living things?", "source": "https://en.wikipedia.org/wiki/Severo_Ochoa", "support": "Severo Ochoa contributed by ___. This matters because ___.", "image": "images/29-severo-ochoa.jpg", "thumb": "thumbs/29-severo-ochoa.jpg", "slug": "severo-ochoa", "cat": "Science, Space & Health"}, {"n": 30, "name": "Evelyn Miralles", "roles": "Engineer, Technology Innovator", "en": "Evelyn Miralles is a Venezuelan American engineer. At NASA’s Johnson Space Center, she helped develop virtual reality technology for astronaut training. Her work allowed astronauts to practice difficult tasks in simulated space environments before performing them on missions.", "es": "Evelyn Miralles es una ingeniera venezolana-estadounidense. En el Centro Espacial Johnson de la NASA, ayudó a desarrollar tecnología de realidad virtual para entrenar a astronautas. Su trabajo permitió que practicaran tareas difíciles en entornos espaciales simulados antes de realizarlas durante las misiones.", "q": "Why might simulated practice help astronauts prepare?", "source": "https://en.wikipedia.org/wiki/Evelyn_Miralles", "support": "Evelyn Miralles contributed by ___. This matters because ___.", "image": "images/30-evelyn-miralles.jpg", "thumb": "thumbs/30-evelyn-miralles.jpg", "slug": "evelyn-miralles", "cat": "Science, Space & Health"}]</script>
+<script>
+const PEOPLE = JSON.parse(document.getElementById('data').textContent);
+const grid = document.getElementById('grid');
+const countEl = document.getElementById('count');
+const dlg = document.getElementById('dlg');
+let cat = 'all', q = '', lang = 'both', shown = [], idx = 0;
+
+function matches(p){
+  const hit = (p.name + ' ' + p.roles + ' ' + p.cat).toLowerCase().includes(q);
+  return (cat === 'all' || p.cat === cat) && hit;
+}
+function render(){
+  shown = PEOPLE.filter(matches);
+  grid.innerHTML = shown.map((p,i) => `
+    <li><button class="card" data-i="${i}">
+      <img src="${p.thumb}" alt="Illustration of ${p.name}" loading="lazy">
+      <div class="card-body">
+        <span class="num">${String(p.n).padStart(2,'0')} / 30</span>
+        <h2>${p.name}</h2>
+        <p class="roles">${p.roles}</p>
+      </div>
+    </button></li>`).join('');
+  countEl.textContent = shown.length === PEOPLE.length
+    ? 'Showing all 30 profiles.'
+    : `Showing ${shown.length} of 30 profiles.`;
+}
+function open(i){
+  idx = (i + shown.length) % shown.length;
+  const p = shown[idx];
+  document.getElementById('d-img').src = p.image;
+  document.getElementById('d-img').alt = 'Illustration of ' + p.name;
+  document.getElementById('d-meta').textContent =
+    String(p.n).padStart(2,'0') + ' / 30   ·   ' + p.roles;
+  document.getElementById('d-name').textContent = p.name;
+  document.getElementById('d-entxt').textContent = p.en;
+  document.getElementById('d-estxt').textContent = p.es;
+  document.getElementById('d-q').textContent = p.q;
+  document.getElementById('d-sup').textContent = p.support;
+  const src = document.getElementById('d-src');
+  if(p.source){ src.href = p.source; src.style.display = ''; } else { src.style.display = 'none'; }
+  applyLang();
+  if(!dlg.open) dlg.showModal();
+  dlg.querySelector('.d-body').scrollTop = 0;
+}
+function applyLang(){
+  document.getElementById('d-en').style.display = (lang === 'es') ? 'none' : '';
+  document.getElementById('d-es').style.display = (lang === 'en') ? 'none' : '';
+}
+grid.addEventListener('click', e => {
+  const b = e.target.closest('.card'); if(b) open(+b.dataset.i);
+});
+document.getElementById('next').onclick = () => open(idx + 1);
+document.getElementById('prev').onclick = () => open(idx - 1);
+document.getElementById('close').onclick = () => dlg.close();
+dlg.addEventListener('keydown', e => {
+  if(e.key === 'ArrowRight') open(idx + 1);
+  if(e.key === 'ArrowLeft') open(idx - 1);
+});
+document.querySelectorAll('.chip').forEach(c => c.onclick = () => {
+  document.querySelectorAll('.chip').forEach(x => x.classList.remove('on'));
+  c.classList.add('on'); cat = c.dataset.cat; render();
+});
+document.querySelectorAll('.langtog button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.langtog button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on'); lang = b.dataset.lang; applyLang();
+});
+document.getElementById('q').addEventListener('input', e => {
+  q = e.target.value.toLowerCase().trim(); render();
+});
+render();
+</script>
+</body>
+</html>
